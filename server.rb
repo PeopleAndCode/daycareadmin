@@ -1,5 +1,7 @@
 require 'sinatra'
+require 'json'
 
 get '/' do
-    "hello world"
+    content_type :json
+    {body: "hello world"}.to_json
 end
