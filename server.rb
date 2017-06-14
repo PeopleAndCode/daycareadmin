@@ -1,7 +1,18 @@
 require 'sinatra'
 require 'json'
 
-get '/' do
+before do
     content_type :json
-    {body: "hello world"}.to_json
+end
+
+get '/' do
+    {body: "hello world"}
+end
+
+get '/hello' do
+    {}
+end
+
+after do
+    response.body = JSON.dump(response.body)
 end
