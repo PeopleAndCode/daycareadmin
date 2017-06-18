@@ -12,4 +12,6 @@ RUN gem install bundler --no-ri --no-rdoc \
 
 WORKDIR /app
 
+EXPOSE 3000
+
 CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "5000"]
