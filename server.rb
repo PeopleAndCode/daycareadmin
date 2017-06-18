@@ -1,22 +1,22 @@
-require 'sinatra/base'
+require 'sinatra'
 require 'json'
 
-class App < Sinatra::Base
-    set :port, 3000
 
-    before do
-        content_type :json
-    end
+set :port, 5000
+set :bind, "0.0.0.0"
 
-    get '/' do
-        {body: "hello world"}
-    end
+before do
+    content_type :json
+end
 
-    get '/hello' do
-        {}
-    end
+get '/' do
+    {body: "hello world"}
+end
 
-    after do
-        response.body = JSON.dump(response.body)
-    end
+get '/hello' do
+    {}
+end
+
+after do
+    response.body = JSON.dump(response.body)
 end
