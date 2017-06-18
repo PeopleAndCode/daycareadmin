@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'json'
 
-set :port, 80
+# set :port, 80
 
 before do
     content_type :json
