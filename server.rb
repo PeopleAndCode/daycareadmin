@@ -2,7 +2,7 @@ require 'sinatra'
 require 'json'
 
 
-set :port, 5000
+set :port, 3000
 set :bind, "0.0.0.0"
 
 before do
