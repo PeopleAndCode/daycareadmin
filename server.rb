@@ -10,7 +10,7 @@ end
 
 get '/' do
     {
-        body: "hello world"
+        body: "hello world2"
     }
 end
 
